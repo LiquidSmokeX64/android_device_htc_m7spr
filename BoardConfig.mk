@@ -27,6 +27,10 @@
 # inherit from common m7-common
 -include device/htc/m7-common/BoardConfigCommon.mk
 
+# Kernel
+TARGET_KERNEL_CONFIG := m7spr_defconfig
+TARGET_KERNEL_SOURCE := kernel/htc/msm8960
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := m7wls,m7spr
 
@@ -34,14 +38,8 @@ TARGET_OTA_ASSERT_DEVICE := m7wls,m7spr
 TARGET_BOOTLOADER_BOARD_NAME := m7wls
 
 # Filesystem
-BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1946156032
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 27917287424
-BOARD_FLASH_BLOCK_SIZE := 131072
-
-# RIL
-BOARD_PROVIDES_LIBRIL := true
 
 # cat /proc/emmc:
 # dev: size erasesize name
