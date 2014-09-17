@@ -27,6 +27,10 @@
 # inherit from common m7-common
 -include device/htc/m7-common/BoardConfigCommon.mk
 
+# Kernel
+TARGET_KERNEL_CONFIG := m7spr_defconfig
+TARGET_KERNEL_SOURCE := kernel/htc/msm8960
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := m7wls,m7spr
 
